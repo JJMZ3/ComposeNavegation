@@ -118,11 +118,11 @@ fun Content2() {
 
         ) {
 
-        Filas1(img = R.drawable.farmhouse, Descript = "#####")
+        Filas2(img = R.drawable.agro, Descript = "#####")
 
         Row(modifier = Modifier) {
             Text(
-                text = "Bienvenido a AGRO!",
+                text = "Introducción al Agro",
                 color = Color.White,
                 modifier = Modifier.fillMaxWidth(),
                 textAlign = TextAlign.Center,
@@ -134,9 +134,10 @@ fun Content2() {
 
         Row(modifier = Modifier.padding(30.dp)) {
             Text(
-                text = "El sector agropecuario colombiano está compuesto por las actividades " +
-                        "de producción primaria en los ámbitos agrícola, pecuario, forestal, " +
-                        "pesquero y acuícola.",
+                text = "El agro, término que deriva de agricultura, abarca una amplia gama de " +
+                        "actividades relacionadas con el cultivo de plantas y la cría de animales " +
+                        "para producir alimentos, fibras, medicinas y otros productos necesarios " +
+                        "para sostener y mejorar la vida humana.",
                 modifier = Modifier.fillMaxWidth(),
                 textAlign = TextAlign.Center,
                 fontSize = 16.sp,
@@ -161,11 +162,11 @@ fun Page_1(navegationController: NavHostController){
 
             ) {
 
-            Filas1(img = R.drawable.farmhouse, Descript = "#####")
+            Filas3(img = R.drawable.agricultura, Descript = "#####")
 
             Row(modifier = Modifier) {
                 Text(
-                    text = "Bienvenido a AGRO!",
+                    text = "Agricultura",
                     color = Color.White,
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
@@ -177,9 +178,13 @@ fun Page_1(navegationController: NavHostController){
 
             Row(modifier = Modifier.padding(30.dp)) {
                 Text(
-                    text = "El sector agropecuario colombiano está compuesto por las actividades " +
-                            "de producción primaria en los ámbitos agrícola, pecuario, forestal, " +
-                            "pesquero y acuícola.",
+                    text = "La agricultura es una de las áreas principales del agro e involucra la " +
+                            "siembra, cultivo y cosecha de plantas. Los principales tipos de " +
+                            "agricultura incluyen la agricultura de secano, que depende únicamente " +
+                            "del agua de lluvia; la agricultura de regadío, que utiliza sistemas de " +
+                            "riego para suplementar el agua de lluvia; la horticultura, que se " +
+                            "dedica al cultivo de plantas en jardines y huertos; y la silvicultura, " +
+                            "que implica el cultivo y manejo de bosques.",
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
                     fontSize = 16.sp,
@@ -188,31 +193,9 @@ fun Page_1(navegationController: NavHostController){
             }
 
             Button(onClick={navegationController.navigate("view_2")}) {
-                Text(text = "Page_2")
+                Text(text = "Importancia del Agro")
             }
         }
-    }
-}
-
-
-@Composable
-fun Filas2(
-    img: Int,
-    Descript: String,
-    modifier: Modifier = Modifier.fillMaxWidth(),
-    imgModifier: Modifier = Modifier
-) {
-    Row(
-        modifier = modifier,
-        horizontalArrangement = Arrangement.Center
-    ) {
-        Image(
-            painter = painterResource(id = img),
-            contentDescription = Descript,
-            modifier = imgModifier
-                .width(300.dp)
-                .height(320.dp)
-        )
     }
 }
 
@@ -236,6 +219,50 @@ fun Filas1(
         )
     }
 }
+
+@Composable
+fun Filas2(
+    img: Int,
+    Descript: String,
+    modifier: Modifier = Modifier.fillMaxWidth(),
+    imgModifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        Image(
+            painter = painterResource(id = img),
+            contentDescription = Descript,
+            modifier = imgModifier
+                .width(400.dp)
+                .height(400.dp)
+        )
+    }
+}
+
+@Composable
+fun Filas3(
+    img: Int,
+    Descript: String,
+    modifier: Modifier = Modifier.fillMaxWidth(),
+    imgModifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        Image(
+            painter = painterResource(id = img),
+            contentDescription = Descript,
+            modifier = imgModifier
+                .width(300.dp)
+                .height(300.dp)
+        )
+    }
+}
+
+
 
 
 
